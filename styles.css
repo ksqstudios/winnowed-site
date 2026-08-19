@@ -47,7 +47,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Ambient gradient wash — a whisper of the 5-stage palette.
+/* Ambient gradient wash: a whisper of the 5-stage palette.
    Positioned absolutely so it doesn't affect layout. */
 .wash {
   position: fixed;
@@ -68,7 +68,7 @@ body {
   padding: 64px 32px 96px;
 }
 
-/* Brand lockup — tiny leaf + name */
+/* Brand lockup: tiny leaf + name */
 .brand {
   display: inline-flex;
   align-items: center;
@@ -186,6 +186,21 @@ body {
   margin-bottom: 24px;
 }
 
+/* Section headings on the privacy and support pages.
+   These live inside .sec, which already supplies the top margin, so no
+   margin-top here. Scoped to .sec rather than styled through .longform,
+   which no page uses. */
+.sec h2 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  font-variation-settings: "opsz" 32, "SOFT" 40;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
 /* Body prose */
 .prose {
   font-family: var(--sans);
@@ -219,7 +234,52 @@ body {
   font-style: italic;
 }
 
-/* Screenshot row — offset editorial layout */
+/* Lists inside prose. The global reset zeroes padding, which clips the
+   default marker outside the content box, so the bullet is drawn
+   explicitly and hung in the restored indent. */
+.prose ul {
+  list-style: none;
+  margin: 0 0 1.2em 0;
+  max-width: 34em;
+}
+
+.prose li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 4px;
+}
+
+.prose li::before {
+  content: "\00B7";
+  position: absolute;
+  left: 6px;
+  color: var(--text-quiet);
+}
+
+/* FAQ entries on the support page. */
+.faq + .faq {
+  margin-top: 28px;
+}
+
+.faq h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  font-variation-settings: "opsz" 24, "SOFT" 40;
+  line-height: 1.35;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.faq p {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 34em;
+}
+
+/* Screenshot row: offset editorial layout */
 .shots {
   margin-top: 88px;
   display: grid;
@@ -264,7 +324,7 @@ body {
   margin-top: 2px;
 }
 
-/* Features list — quiet, numbered */
+/* Features list: quiet, numbered */
 .features {
   margin-top: 32px;
   display: grid;
@@ -337,7 +397,13 @@ body {
   gap: 24px;
 }
 
-/* Long-form page (privacy, support) */
+/* Long-form page (privacy, support)
+
+   UNUSED. No page carries class="longform", so every rule in this block is
+   dead. It is kept for reference only. Do not activate by adding the class:
+   .longform a outranks .brand and .footer a, which would turn the brand
+   lockup and footer links rust on these pages, and .longform p overrides
+   .hero-sub. The live equivalents are .sec h2, .prose ul, and .faq above. */
 .longform h1 {
   font-family: var(--serif);
   font-size: clamp(40px, 5.5vw, 60px);
@@ -400,7 +466,7 @@ body {
 }
 
 .longform li::before {
-  content: "—";
+  content: "\00B7";
   position: absolute;
   left: 0;
   color: var(--text-quiet);
