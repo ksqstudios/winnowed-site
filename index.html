@@ -107,6 +107,11 @@
         width: 100%;
         max-width: 300px;
         height: auto;
+        /* Rounded here rather than baked into the PNGs, matching how
+           .shot img is handled in styles.css. Harmless on any existing
+           asset that already carries transparent rounded corners, since
+           this radius is smaller than a device corner. */
+        border-radius: 22px;
     }
 
     @media (max-width: 720px) {
