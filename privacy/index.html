@@ -69,7 +69,7 @@
 
     <h1 class="hero">Privacy</h1>
 
-    <p class="hero-sub">Effective August 19, 2026</p>
+    <p class="hero-sub">Effective September 1, 2026</p>
 
     <div class="prose">
       <p class="lede">
@@ -82,7 +82,10 @@
       <div class="prose fade-up">
         <p><strong>Nothing.</strong></p>
         <p>
-          Winnowed does not collect, store, transmit, or share any personal information. Everything you enter, including subscription names, costs, review decisions, notes, and receipts you scan, stays on your device. It never leaves.
+          Winnowed has no servers, no accounts, and no way to see your data. Everything you enter, including subscription names, costs, review decisions, notes, and receipts you scan, belongs to you.
+        </p>
+        <p>
+          Winnowed does sync that data between your own devices, through your own iCloud account. It goes to Apple, not to us, and it stays inside the part of iCloud only you can reach. There is more detail below.
         </p>
       </div>
     </section>
@@ -93,10 +96,25 @@
         <ul>
           <li>No accounts. No sign-in. No email address required to use the app.</li>
           <li>No analytics. No tracking. No telemetry.</li>
-          <li>No cloud sync. No remote backups. No servers of any kind.</li>
+          <li>No servers of ours. Sync runs through your iCloud account, not through anything we operate.</li>
           <li>No third-party SDKs for advertising, analytics, or tracking.</li>
           <li>No data shared with anyone. Ever.</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2 class="fade-up">iCloud sync</h2>
+      <div class="prose fade-up">
+        <p>
+          Your subscriptions, reviews, and price history sync across the devices signed in to your Apple Account. This uses your private iCloud database, the same mechanism Apple's own apps use.
+        </p>
+        <p>
+          That database belongs to you. Winnowed cannot read it, and neither can anyone else. There is no Winnowed server involved at any point, and nothing is sent to us. Apple encrypts the data in transit and at rest, and it is subject to <a href="https://www.apple.com/legal/privacy/en-ww/" style="color: var(--rust); text-decoration: none; border-bottom: 1px solid rgba(160, 61, 30, 0.25);">Apple's privacy policy</a>.
+        </p>
+        <p>
+          If you are not signed in to iCloud, Winnowed works exactly as before and keeps everything on your device. Settings will tell you which is happening. You can stop syncing at any time by turning Winnowed off under Settings, your name, iCloud, on your device. Data already synced stays in your iCloud account until you remove it there.
+        </p>
       </div>
     </section>
 
@@ -107,7 +125,7 @@
           When you scan a statement or receipt, Winnowed reads it in one of two ways, both entirely on your device. On devices with Apple Intelligence, it uses Apple's on-device Foundation Models framework to understand what it is looking at. Everywhere else, it uses Apple's on-device Vision framework to extract text and matches patterns against it.
         </p>
         <p>
-          Nothing is sent to a server in either case. Not a Winnowed server, not an Apple server, not any server. Images and text are processed on your phone and stay there.
+          The reading itself happens on your phone in either case. No image is uploaded and no text is sent anywhere to be interpreted. What you choose to keep afterward becomes a subscription like any other, and syncs the same way.
         </p>
       </div>
     </section>
@@ -119,7 +137,7 @@
           Forward Receipts is an optional one-time purchase. It lets you select the text of a subscription receipt in Mail, Safari, or Notes and share it into Winnowed through the iOS share sheet.
         </p>
         <p>
-          The shared text is read by the same on-device parser that handles camera scans. No email, no image, and no extracted text is transmitted anywhere. Nothing is forwarded to an address, and there is no server involved at any point.
+          The shared text is read by the same on-device parser that handles camera scans. No email and no image is uploaded, and nothing is forwarded to an address. What you add from it becomes a subscription like any other.
         </p>
       </div>
     </section>
@@ -140,7 +158,7 @@
       <h2 class="fade-up">iCloud backup</h2>
       <div class="prose fade-up">
         <p>
-          Your device's standard iCloud backup, if you have it enabled in your iOS Settings, may include Winnowed's data, the same as any other app. This backup is controlled by Apple, encrypted in transit and at rest, and subject to <a href="https://www.apple.com/legal/privacy/en-ww/" style="color: var(--rust); text-decoration: none; border-bottom: 1px solid rgba(160, 61, 30, 0.25);">Apple's privacy policy</a>. Winnowed has no access to it.
+          Separately from sync, your device's standard iCloud backup may also include Winnowed's data, the same as any other app. That backup is controlled by Apple and Winnowed has no access to it either.
         </p>
       </div>
     </section>
