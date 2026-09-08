@@ -39,6 +39,7 @@ IMAGES = [
     ("07-outro.png",      "also-02-gradient.png"),
     ("08-history.png",    "also-03-history.png"),
     ("09-onboarding.png", "also-04-device.png"),
+    ("widget.png", "widget.png")
 ]
 
 
