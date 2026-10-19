@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Support: Winnowed</title>
   <meta name="description" content="Help, bug reports, and feedback for Winnowed. Written by the person who built it.">
-
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%237A9B5E%22/><path d=%22M50 28c10 0 20 8 20 22s-10 22-20 22-20-8-20-22%22 fill=%22none%22 stroke=%22%23FAF5EC%22 stroke-width=%226%22/></svg>">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Support: Winnowed">
   <meta property="og:description" content="Help, bug reports, and feedback for Winnowed. Written by the person who built it.">
   <meta property="og:url" content="https://winnowed.app/support">
@@ -19,165 +14,113 @@
   <meta property="og:image" content="https://winnowed.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-
-  <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://winnowed.app/og-image.png">
-
   <link rel="canonical" href="https://winnowed.app/support">
-
-  <meta name="theme-color" content="#FAF5EC">
-
-  <link rel="stylesheet" href="/styles.css">
-
-  <!-- Scroll fade-in utility -->
-  <style>
-    .fade-up {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-      will-change: opacity, transform;
-    }
-    .fade-up.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .fade-up {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
-  </style>
-
+  <meta name="theme-color" content="#a8462a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="wash" aria-hidden="true"></div>
 
-  <main class="wrap">
-    <a href="/" class="brand">
-      <span class="brand-leaf">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z M2 21c0-3 1.85-5.36 5.08-6"/>
-        </svg>
-      </span>
-      <span class="brand-name">Winnowed</span>
+<header class="bar">
+  <div class="bar-inner">
+    <a class="mark" href="/">
+      <img src="/apple-touch-icon.png" alt="" width="30" height="30">
+      Winnowed
     </a>
+    <nav aria-label="Site">
+      <a href="/support">Support</a>
+      <a class="bar-cta" href="https://apps.apple.com/us/app/winnowed-subscription-tracker/id6764893370" rel="noopener">Get Winnowed</a>
+    </nav>
+  </div>
+</header>
 
-    <h1 class="hero">Support</h1>
+<div class="doc-band">
+  <header class="doc-head">
+    <h1>Support</h1>
+    <p class="updated">Help, bug reports, and feedback</p>
+  </header>
+</div>
 
-    <p class="hero-sub">Help, bug reports, and feedback</p>
-
-    <div class="prose">
-      <p class="lede">
+<main class="doc">
+<p class="lede">
         Winnowed is built and supported by one person. If something isn't working, or you have an idea, or you just want to say hello, write directly. I read every message.
       </p>
-      <p>
-        <a href="mailto:techsupport@ksqstudios.com" style="color: var(--rust); text-decoration: none; border-bottom: 1px solid rgba(160, 61, 30, 0.25);">techsupport@ksqstudios.com</a>
-      </p>
-    </div>
+<p>
+<a href="mailto:techsupport@ksqstudios.com">techsupport@ksqstudios.com</a>
+</p>
 
-    <section class="sec">
-      <h2 class="fade-up">Before you email</h2>
-      <div class="prose fade-up">
-        <p>A few things that will help me help you faster:</p>
-        <ul>
-          <li>Your iOS version (Settings, General, About).</li>
-          <li>A description of what you were doing when the issue happened.</li>
-          <li>A screenshot, if the problem is visual.</li>
-        </ul>
-      </div>
-    </section>
 
-    <section class="sec">
-      <p class="sec-label fade-up">Common questions</p>
+<h2>Before you email</h2>
 
-      <div class="faq fade-up">
-        <h3>How do I export my data?</h3>
-        <p>Settings, then Data, then Export to PDF. The PDF contains your full subscription history, including past reviews and price changes.</p>
-      </div>
+<p>A few things that will help me help you faster:</p>
+<ul>
+<li>Your iOS version (Settings, General, About).</li>
+<li>A description of what you were doing when the issue happened.</li>
+<li>A screenshot, if the problem is visual.</li>
+</ul>
 
-      <div class="faq fade-up">
-        <h3>How do I change my review cadence?</h3>
-        <p>Settings, then Ritual, then Review cadence. You can pick monthly, quarterly, or twice a year. Quarterly is the default, because it is the cadence Winnowed is designed around.</p>
-      </div>
 
-      <div class="faq fade-up">
-        <h3>Does Winnowed cancel subscriptions for me?</h3>
-        <p>No. Winnowed helps you decide what to cut. The actual cancellation happens in each service's own settings. Winnowed will open the cancellation page for you when it has one on file.</p>
-      </div>
 
-      <div class="faq fade-up">
-        <h3>Does Winnowed sync between my devices?</h3>
-        <p>Yes. Your subscriptions, reviews, and price history sync through your own iCloud account, so your Stack is the same wherever you open it. There is no account to make and nothing to switch on. Settings shows you whether sync is running. If you are not signed in to iCloud, Winnowed works exactly as before and keeps everything on the device you are using.</p>
-      </div>
+<h2>Common questions</h2>
+<div class="faq">
+<h3>How do I export my data?</h3>
+<p>Settings, then Data, then Export to PDF. The PDF contains your full subscription history, including past reviews and price changes.</p>
+</div>
+<div class="faq">
+<h3>How do I change my review cadence?</h3>
+<p>Settings, then Ritual, then Review cadence. You can pick monthly, quarterly, or twice a year. Quarterly is the default, because it is the cadence Winnowed is designed around.</p>
+</div>
+<div class="faq">
+<h3>Does Winnowed cancel subscriptions for me?</h3>
+<p>No. Winnowed helps you decide what to cut. The actual cancellation happens in each service's own settings. Winnowed will open the cancellation page for you when it has one on file.</p>
+</div>
+<div class="faq">
+<h3>Does Winnowed sync between my devices?</h3>
+<p>Yes. Your subscriptions, reviews, and price history sync through your own iCloud account, so your Stack is the same wherever you open it. There is no account to make and nothing to switch on. Settings shows you whether sync is running. If you are not signed in to iCloud, Winnowed works exactly as before and keeps everything on the device you are using.</p>
+</div>
+<div class="faq">
+<h3>Can Winnowed see my data?</h3>
+<p>No. Sync uses the private part of your iCloud account, which only you can reach. There is no Winnowed server involved and nothing is sent to us. If you would rather not sync at all, turn Winnowed off under Settings, your name, then iCloud on your device.</p>
+</div>
+<div class="faq">
+<h3>What can I ask Siri?</h3>
+<p>Try "get subscription spend in Winnowed" for your annual total, or ask what a single subscription costs you. You can also add a subscription or mark one reviewed without opening the app. Every action is available in Shortcuts, and your subscriptions turn up in Spotlight search. You will need at least one subscription added first, since the questions are answered from your own data.</p>
+</div>
+<div class="faq">
+<h3>What is Forward Receipts?</h3>
+<p>A one-time purchase that lets you add a subscription without typing it. Select the text of a receipt in Mail, Safari, or Notes, tap Share, and choose Winnowed. The same on-device parser that reads camera scans reads the text, and a confirmation sheet appears so you can check the details before adding. Nothing is sent to a server. One purchase covers your Apple Family. You will find it under Settings, then Forward Receipts.</p>
+</div>
+<div class="faq">
+<h3>Why can't I update to the latest version?</h3>
+<p>Winnowed 2.0 requires iOS 27. If your iPhone is on iOS 26, the App Store will keep you on version 1.1, which continues to work. Updating your device will bring the new version with it.</p>
+</div>
+<div class="faq">
+<h3>Will Winnowed come to other platforms?</h3>
+<p>iPhone first. iPad support and watchOS are on the roadmap. No plans for Android or Web, because keeping the app small and on-device is part of the design.</p>
+</div>
 
-      <div class="faq fade-up">
-        <h3>Can Winnowed see my data?</h3>
-        <p>No. Sync uses the private part of your iCloud account, which only you can reach. There is no Winnowed server involved and nothing is sent to us. If you would rather not sync at all, turn Winnowed off under Settings, your name, then iCloud on your device.</p>
-      </div>
 
-      <div class="faq fade-up">
-        <h3>What can I ask Siri?</h3>
-        <p>Try "get subscription spend in Winnowed" for your annual total, or ask what a single subscription costs you. You can also add a subscription or mark one reviewed without opening the app. Every action is available in Shortcuts, and your subscriptions turn up in Spotlight search. You will need at least one subscription added first, since the questions are answered from your own data.</p>
-      </div>
 
-      <div class="faq fade-up">
-        <h3>What is Forward Receipts?</h3>
-        <p>A one-time purchase that lets you add a subscription without typing it. Select the text of a receipt in Mail, Safari, or Notes, tap Share, and choose Winnowed. The same on-device parser that reads camera scans reads the text, and a confirmation sheet appears so you can check the details before adding. Nothing is sent to a server. One purchase covers your Apple Family. You will find it under Settings, then Forward Receipts.</p>
-      </div>
-
-      <div class="faq fade-up">
-        <h3>Why can't I update to the latest version?</h3>
-        <p>Winnowed 2.0 requires iOS 27. If your iPhone is on iOS 26, the App Store will keep you on version 1.1, which continues to work. Updating your device will bring the new version with it.</p>
-      </div>
-
-      <div class="faq fade-up">
-        <h3>Will Winnowed come to other platforms?</h3>
-        <p>iPhone first. iPad support and watchOS are on the roadmap. No plans for Android or Web, because keeping the app small and on-device is part of the design.</p>
-      </div>
-    </section>
-
-    <section class="sec">
-      <div class="prose fade-up">
-        <p class="quiet" style="color: var(--text-muted);">
+<p class="quiet">
           Kurt Klein, Berwyn, Pennsylvania
         </p>
-      </div>
-    </section>
+</main>
 
-    <footer class="footer fade-up">
-      <div>© 2026 KSQ Studios LLC · Winnowed</div>
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/privacy">Privacy</a>
-        <a href="mailto:techsupport@ksqstudios.com">Email</a>
-      </div>
-    </footer>
-  </main>
+<footer class="foot">
+  <div class="foot-inner">
+    <nav aria-label="Footer">
+      <a href="/privacy">Privacy</a>
+      <a href="/support">Support</a>
+      <a href="mailto:techsupport@ksqstudios.com">techsupport@ksqstudios.com</a>
+      <a href="https://ksqstudios.com">KSQ Studios</a>
+    </nav>
+    <p>2026 KSQ Studios LLC. Winnowed is made in Berwyn, Pennsylvania.</p>
+  </div>
+</footer>
 
-  <!-- Scroll-triggered fade-in -->
-  <script>
-    (function () {
-      var items = document.querySelectorAll('.fade-up');
-      if (!('IntersectionObserver' in window) || items.length === 0) {
-        for (var i = 0; i < items.length; i++) items[i].classList.add('is-visible');
-        return;
-      }
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -8% 0px'
-      });
-      items.forEach(function (el) { observer.observe(el); });
-    })();
-  </script>
 </body>
 </html>

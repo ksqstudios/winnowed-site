@@ -1,6 +1,6 @@
 # winnowed-site
 
-Marketing site for [Winnowed](https://winnowed.app) — the subscription tracker designed around a quarterly review ritual.
+Marketing site for [Winnowed](https://winnowed.app), the subscription tracker designed around a quarterly review ritual.
 
 ## Structure
 
@@ -16,7 +16,7 @@ winnowed-site/
     └── widget.png
 ```
 
-Single-page HTML/CSS with no build step. Typography is Fraunces (display) and Inter (body) via Google Fonts. Colors pull from Winnowed's 5-stage harvest palette (sage → burgundy).
+Static HTML/CSS with no build step. Typography is Young Serif (display) and Libre Franklin (body) via Google Fonts. Colors pull from Winnowed's five-stage harvest palette, sage to burgundy. The home page opens on a review you can try: cut subscriptions blow away as chaff, kept ones add up to the Winnowed Number.
 
 ## Deploy (Cloudflare Pages)
 
@@ -33,4 +33,4 @@ Every `git push` to `main` auto-deploys.
 
 ## Analytics
 
-[Plausible](https://plausible.io) — privacy-preserving, no cookies, no personal data. Domain is set to `winnowed.app` in the script tag on each page.
+None. The site collects nothing, and the privacy policy says so.

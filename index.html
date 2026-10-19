@@ -6,12 +6,9 @@
     <title>Winnowed: Keep what counts, cut the rest.</title>
     <meta name="description" content="A subscription tracker designed around a quarterly review ritual. Sit with each one. Keep what counts. Cut what doesn't.">
 
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%237A9B5E%22/><path d=%22M50 28c10 0 20 8 20 22s-10 22-20 22-20-8-20-22%22 fill=%22none%22 stroke=%22%23FAF5EC%22 stroke-width=%226%22/></svg>">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Winnowed: Keep what counts, cut the rest.">
     <meta property="og:description" content="A subscription tracker designed around a quarterly review ritual.">
     <meta property="og:url" content="https://winnowed.app">
@@ -19,18 +16,17 @@
     <meta property="og:image" content="https://winnowed.app/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-
-    <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://winnowed.app/og-image.png">
 
     <link rel="canonical" href="https://winnowed.app">
+    <meta name="theme-color" content="#a8462a">
 
-    <meta name="theme-color" content="#FAF5EC">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
 
-    <!-- Structured data: SoftwareApplication schema for richer search results -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -46,293 +42,287 @@
           "priceCurrency": "USD"
         },
         "author": {
-          "@type": "Person",
-          "name": "Kurt Klein"
-        },
-        "publisher": {
           "@type": "Organization",
           "name": "KSQ Studios LLC",
           "url": "https://ksqstudios.com"
         }
       }
-      </script>
-
-    <!-- Scroll fade-in + Also section side-by-side layout -->
-    <style>
-    /* Fade-in utility: any element with .fade-up slides up + fades in
-           when it enters the viewport. One-shot: we unobserve after reveal. */
-    .fade-up {
-        opacity: 0;
-        transform: translateY(24px);
-        transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-        will-change: opacity, transform;
-    }
-
-    .fade-up.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        .fade-up {
-            opacity: 1;
-            transform: none;
-            transition: none;
-        }
-    }/* Also section: two-column screenshot + text, zig-zagged by .reverse. */
-
-    .feature {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 56px;
-        align-items: center;
-        margin: 64px 0;
-    }
-
-    .feature.reverse .feature-shot {
-        order: 2;
-    }
-
-    .feature.reverse .feature-text {
-        order: 1;
-    }
-
-    .feature-shot {
-        display: flex;
-        justify-content: center;
-    }
-
-    .feature-shot img {
-        display: block;
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        /* Rounded here rather than baked into the PNGs, matching how
-           .shot img is handled in styles.css. Harmless on any existing
-           asset that already carries transparent rounded corners, since
-           this radius is smaller than a device corner. */
-        border-radius: 22px;
-    }
-
-    @media (max-width: 720px) {
-        .feature, .feature.reverse {
-            grid-template-columns: 1fr;
-            gap: 24px;
-            margin: 48px 0;
-        }
-
-        .feature.reverse .feature-shot {
-            order: 0;
-        }
-
-        .feature.reverse .feature-text {
-            order: 0;
-        }
-
-        .feature-shot img {
-            max-width: 240px;
-        }
-    }
-    </style>
-
+    </script>
 </head>
 <body>
-    <div class="wash" aria-hidden="true"></div>
 
-    <main class="wrap">
-        <a href="/" class="brand">
-            <span class="brand-leaf">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z M2 21c0-3 1.85-5.36 5.08-6"/>
-                </svg>
-            </span>
-            <span class="brand-name">Winnowed</span>
-        </a>
+<header class="bar">
+  <div class="bar-inner">
+    <a class="mark" href="/">
+      <img src="/apple-touch-icon.png" alt="" width="30" height="30">
+      Winnowed
+    </a>
+    <nav aria-label="Site">
+      <a href="/support">Support</a>
+      <a class="bar-cta" href="https://apps.apple.com/us/app/winnowed-subscription-tracker/id6764893370" rel="noopener">Get Winnowed</a>
+    </nav>
+  </div>
+</header>
 
-        <p class="hero-tag">A subscription tracker</p>
+<main>
 
-        <h1 class="hero">
+  <!-- The hero is a review you can actually do. Cut subscriptions blow off
+       like chaff; kept ones settle into the Winnowed Number. -->
+  <section class="field">
+    <div class="field-inner">
+      <div class="field-copy">
+        <h1>Keep what counts. Cut the rest.</h1>
+        <p class="lede">
+          Every few months, sit with your subscriptions. Ask a simple question
+          of each one: is this still worth it? Winnowed turns the review into
+          a ritual, calm, honest, and finished in about five minutes.
+        </p>
+        <p class="buy">
+          <a class="button" href="https://apps.apple.com/us/app/winnowed-subscription-tracker/id6764893370" rel="noopener">Download on the App Store</a>
+          <span>$4.99 once. No subscription.</span>
+        </p>
+      </div>
 
-                  Keep what counts.
-            <br>
-            <em>Cut the rest.</em>
-        </h1>
+      <div class="review" id="review" aria-labelledby="review-title">
+        <h2 class="review-title" id="review-title">Try a review</h2>
+        <p class="review-hint" id="review-hint">A sample Stack, one card at a time.</p>
 
-        <p class="hero-sub">
-              Every few months, sit with your subscriptions. Ask a simple question of each one.
-              Is this still worth it? Winnowed turns the review into a ritual: calm, honest, and finished in about five minutes.
-            </p>
+        <div class="deck" id="deck" aria-live="polite">
+          <!-- Cards are written here so the page reads without script. -->
+          <article class="card" data-cost="2160"><p class="card-tier">Burgundy</p><h3>Verizon</h3><p class="card-price">$180 a month, $2,160 a year</p></article>
+          <article class="card" data-cost="720"><p class="card-tier">Rust</p><h3>Adobe Creative Cloud</h3><p class="card-price">$59.99 a month, $720 a year</p></article>
+          <article class="card" data-cost="455"><p class="card-tier">Rust</p><h3>Apple One</h3><p class="card-price">$37.95 a month, $455 a year</p></article>
+          <article class="card" data-cost="300"><p class="card-tier">Terracotta</p><h3>Netflix</h3><p class="card-price">$24.99 a month, $300 a year</p></article>
+          <article class="card" data-cost="288"><p class="card-tier">Terracotta</p><h3>Peloton</h3><p class="card-price">$24 a month, $288 a year</p></article>
+          <article class="card" data-cost="204"><p class="card-tier">Terracotta</p><h3>The New York Times</h3><p class="card-price">$17 a month, $204 a year</p></article>
+          <article class="card" data-cost="192"><p class="card-tier">Terracotta</p><h3>Disney+</h3><p class="card-price">$15.99 a month, $192 a year</p></article>
+          <article class="card" data-cost="35"><p class="card-tier">Wheat</p><h3>Day One</h3><p class="card-price">$34.99 a year</p></article>
+        </div>
 
-        <a href="https://apps.apple.com/us/app/winnowed-subscription-tracker/id6764893370" rel="noopener" class="store-note" style="text-decoration: none; transition: background 120ms ease;">
-            <span class="store-note-dot"></span>
-            Download on the App Store
-        </a>
+        <div class="choices" id="choices">
+          <button type="button" class="choice choice--cut" data-choice="cut">Cut</button>
+          <button type="button" class="choice choice--pause" data-choice="pause">Pause</button>
+          <button type="button" class="choice choice--keep" data-choice="keep">Keep</button>
+        </div>
 
-        <!-- The argument -->
-        <section class="sec">
-            <p class="sec-label fade-up">The idea</p>
+        <dl class="tally">
+          <div><dt>Kept, a year</dt><dd id="tally-kept">$0</dd></div>
+          <div><dt>Cut, a year</dt><dd id="tally-cut">$0</dd></div>
+          <div><dt>Paused</dt><dd id="tally-paused">0</dd></div>
+        </dl>
 
-            <div class="prose fade-up">
-                <p class="lede">
-                          Most people underestimate what they're paying for subscriptions by a lot. The streaming service you forgot. The tool you used twice. The membership from two years ago.
-                        </p>
-                <p>
-                          The usual answer is a spreadsheet, a dashboard of charts, or a cancellation concierge. None of them really work, because the problem isn't a tracking problem, it's a noticing problem. You need a moment, a few times a year, to sit quietly with the list and decide what still belongs.
-                        </p>
-                <p>
-                          Winnowed is built around that moment. Add your subscriptions by scanning a statement or typing them in. Then, at a cadence you choose, the app walks you through each one, card by card. Keep. Cut. Pause. That's it.
-                        </p>
-            </div>
-        </section>
+        <div class="done" id="done" hidden>
+          <p class="done-number" id="done-number">$0</p>
+          <p class="done-note">Your Winnowed Number: what you spend a year on subscriptions you chose on purpose.</p>
+          <button type="button" class="again" id="again">Review again</button>
+        </div>
+      </div>
+    </div>
+    <div class="chaff" id="chaff" aria-hidden="true"></div>
+  </section>
 
-        <!-- Screenshots -->
-        <section class="sec">
-            <p class="sec-label fade-up">The app</p>
+  <section class="idea">
+    <p class="idea-lead">
+      Most people underestimate what they're paying for subscriptions by a
+      lot. The streaming service you forgot. The tool you used twice. The
+      membership from two years ago.
+    </p>
+    <div class="idea-body">
+      <p>
+        The usual answer is a spreadsheet, a dashboard of charts, or a
+        cancellation concierge. None of them really work, because the problem
+        isn't a tracking problem, it's a noticing problem. You need a moment,
+        a few times a year, to sit quietly with the list and decide what still
+        belongs.
+      </p>
+      <p>
+        Winnowed is built around that moment. Add your subscriptions by
+        scanning a statement or typing them in. Then, at a cadence you choose,
+        the app walks you through each one, card by card. Keep. Cut. Pause.
+        That's it.
+      </p>
+    </div>
+  </section>
 
-            <div class="shots">
-                <figure class="shot fade-up">
-                    <img src="/images/stack.png" alt="The Stack screen, showing $4,650 a year across twelve subscriptions, grouped by cost tier from burgundy down to sage." loading="lazy">
-                    <figcaption>
-                        <div class="shot-caption">The Stack</div>
-                        <div class="shot-caption-sub">Subscriptions grouped by how much they cost over five years.</div>
-                    </figcaption>
-                </figure>
+  <section class="ritual" aria-labelledby="ritual-title">
+    <h2 id="ritual-title">The ritual, from start to finish</h2>
+    <ol class="steps">
+      <li>
+        <img src="/images/also-01-scan.png" alt="The scan triage screen, showing Dropbox, Notion, Max and Peloton found on a bank statement, each with a confidence figure and a checkbox." width="900" height="1955" loading="lazy">
+        <h3>Scan a statement</h3>
+        <p>Point your camera at a bank statement. On devices with Apple Intelligence, Winnowed reads it on device and understands what it is looking at. Either way it finds the subscriptions and asks which ones to add.</p>
+      </li>
+      <li>
+        <img src="/images/stack.png" alt="The Stack screen, showing $4,650 a year across twelve subscriptions, grouped by cost tier from burgundy down to sage." width="900" height="1955" loading="lazy">
+        <h3>See the Stack</h3>
+        <p>Every subscription, grouped by what it costs over five years, from burgundy at the top down to sage.</p>
+      </li>
+      <li>
+        <img src="/images/review.png" alt="The Review screen, showing one subscription at a time with a usage question, a short note on why, and Cut, Pause and Keep." width="900" height="1955" loading="lazy">
+        <h3>Review, card by card</h3>
+        <p>How often do you use it? Swipe right to keep, left to cut, and note why. New in 2.1, each review can carry that note.</p>
+      </li>
+      <li>
+        <img src="/images/also-02-gradient.png" alt="The Aligned summary screen: $3,178 of aligned annual spending across six subscriptions, one cut and two paused." width="900" height="1955" loading="lazy">
+        <h3>Get the Winnowed Number</h3>
+        <p>What you spend a year on subscriptions you chose on purpose. Everything you cut sits underneath it, counted.</p>
+      </li>
+      <li>
+        <img src="/images/also-03-history.png" alt="The History screen showing $477 saved per year across three completed review sessions." width="720" height="1564" loading="lazy">
+        <h3>Keep the record</h3>
+        <p>Every review is saved, and so are price changes. History is a quiet ledger of what you decided and what it saved you.</p>
+      </li>
+    </ol>
+  </section>
 
-                <figure class="shot fade-up">
-                    <img src="/images/review.png" alt="The Review screen, showing one subscription at a time with a usage question, a short note on why, and Cut, Pause, and Keep options." loading="lazy">
-                    <figcaption>
-                        <div class="shot-caption">The Review</div>
-                        <div class="shot-caption-sub">One card at a time. Swipe right to keep, left to cut, and note why.</div>
-                    </figcaption>
-                </figure>
+  <section class="unfold" aria-labelledby="unfold-title">
+    <img class="device" src="/images/duo.png" alt="Winnowed on the unfolded iPhone Duo: the Stack at $4,650 a year on the left, Apple One's detail and review history on the right." width="1600" height="1125" loading="lazy">
+    <div class="unfold-copy">
+      <h2 id="unfold-title">Unfold the whole Stack</h2>
+      <p>
+        On iPhone Duo, Winnowed shows your Stack beside the subscription
+        you're looking at. New in 2.1.
+      </p>
+    </div>
+  </section>
 
-                <figure class="shot fade-up">
-                    <img src="/images/widget.png" alt="A home screen widget showing annual spending and top subscriptions." loading="lazy">
-                    <figcaption>
-                        <div class="shot-caption">The Widget</div>
-                        <div class="shot-caption-sub">A quiet reminder on your home screen.</div>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
+  <section class="also" aria-labelledby="also-title">
+    <h2 class="visually-hidden" id="also-title">Also</h2>
+    <div class="also-item">
+      <img src="/images/also-05-siri.png" alt="Siri answering a spending question over the Winnowed Stack screen." width="900" height="1955" loading="lazy">
+      <div>
+        <h3>Just ask</h3>
+        <p>Ask Siri what you're spending this year, or what any one subscription costs you. Add a subscription or mark one reviewed without opening the app. Your Stack turns up in Spotlight, and every action works as a Shortcut.</p>
+      </div>
+    </div>
+    <div class="also-item">
+      <img src="/images/widget.png" alt="A Home Screen widget showing $4,650 a year, the top subscriptions and a reminder that it's time to winnow." width="720" height="1564" loading="lazy">
+      <div>
+        <h3>A quiet reminder</h3>
+        <p>The widget keeps the annual total on your Home Screen, and tells you when it is time to winnow again.</p>
+      </div>
+    </div>
+    <div class="also-item">
+      <img src="/images/also-04-device.png" alt="The Winnowed onboarding Aligned Spending screen, with a sage leaf mark and the choice to scan receipts or add a subscription by hand." width="720" height="1564" loading="lazy">
+      <div>
+        <h3>Yours, and nobody else's</h3>
+        <p>Your Stack syncs through your own iCloud account. No accounts to make, no servers of ours, no tracking. Winnowed cannot see your data, and neither can anyone else.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Features, numbered and quiet -->
-        <section class="sec">
-            <p class="sec-label fade-up">Also</p>
+  <section class="maker">
+    <p>
+      Winnowed is designed, built, and supported by one person, Kurt Klein,
+      in Berwyn, Pennsylvania, under <a href="https://ksqstudios.com">KSQ Studios</a>.
+      If you've used it and want to say hello, report a bug, or suggest
+      something, write to <a href="mailto:techsupport@ksqstudios.com">techsupport@ksqstudios.com</a>.
+    </p>
+    <p class="buy">
+      <a class="button" href="https://apps.apple.com/us/app/winnowed-subscription-tracker/id6764893370" rel="noopener">Download on the App Store</a>
+    </p>
+  </section>
 
-            <div class="features">
-                <div class="feature fade-up">
-                    <div class="feature-shot">
-                        <img src="/images/also-01-scan.png" alt="The scan triage screen, showing Dropbox, Notion, Max, and Peloton found on a bank statement, each with a confidence figure and a checkbox." loading="lazy">
-                    </div>
-                    <div class="feature-text">
-                        <div class="feature-num">01</div>
-                        <div class="feature-title">Scan a receipt.</div>
-                        <div class="feature-body">Point your camera at a bank statement. On devices with Apple Intelligence, Winnowed reads it on device and understands what it is looking at rather than matching patterns. Either way it finds the subscriptions and asks which ones to add.</div>
-                    </div>
-                </div>
+</main>
 
-                <div class="feature reverse fade-up">
-                    <div class="feature-shot">
-                        <img src="/images/also-02-gradient.png" alt="The Aligned summary screen, with a sage-green card showing $3,178 of aligned annual spending across six subscriptions, one cut and two paused." loading="lazy">
-                    </div>
-                    <div class="feature-text">
-                        <div class="feature-num">02</div>
-                        <div class="feature-title">The Winnowed Number.</div>
-                        <div class="feature-body">What you spend a year on subscriptions you chose on purpose. Everything you cut sits underneath it, counted.</div>
-                    </div>
-                </div>
+<footer class="foot">
+  <div class="foot-inner">
+    <nav aria-label="Footer">
+      <a href="/privacy">Privacy</a>
+      <a href="/support">Support</a>
+      <a href="mailto:techsupport@ksqstudios.com">techsupport@ksqstudios.com</a>
+      <a href="https://ksqstudios.com">KSQ Studios</a>
+    </nav>
+    <p>2026 KSQ Studios LLC. Winnowed is made in Berwyn, Pennsylvania.</p>
+  </div>
+</footer>
 
-                <div class="feature fade-up">
-                    <div class="feature-shot">
-                        <img src="/images/also-03-history.png" alt="The History screen showing $477 saved per year across three completed review sessions." loading="lazy">
-                    </div>
-                    <div class="feature-text">
-                        <div class="feature-num">03</div>
-                        <div class="feature-title">A record of your choices.</div>
-                        <div class="feature-body">Every review is saved. So are price changes. The History screen is a quiet ledger of what you've decided, and what it's saved you.</div>
-                    </div>
-                </div>
+<script>
+  // The review in the hero. Each choice moves the top card on: kept cards
+  // add to the Winnowed Number, cut cards blow away as chaff, paused cards
+  // slide aside. Nothing is stored or sent.
+  (function () {
+    var deck = document.getElementById('deck');
+    var chaff = document.getElementById('chaff');
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var originals = Array.prototype.slice.call(deck.children).map(function (c) { return c.cloneNode(true); });
+    var kept = 0, cut = 0, paused = 0, busy = false;
+    var $ = function (id) { return document.getElementById(id); };
+    function money(n) { return '$' + n.toLocaleString('en-US'); }
 
-                <div class="feature reverse fade-up">
-                    <div class="feature-shot">
-                        <img src="/images/also-04-device.png" alt="The Winnowed onboarding Aligned Spending screen, with a sage leaf mark and the choice to scan receipts or add a subscription by hand." loading="lazy">
-                    </div>
-                    <div class="feature-text">
-                        <div class="feature-num">04</div>
-                        <div class="feature-title">Yours, on every device.</div>
-                        <div class="feature-body">Your Stack syncs through your own iCloud account, so it is the same on your iPhone wherever you pick it up. No accounts to make, no servers of ours, no tracking. Winnowed cannot see your data, and neither can anyone else.</div>
-                    </div>
-                </div>
+    function tally() {
+      $('tally-kept').textContent = money(kept);
+      $('tally-cut').textContent = money(cut);
+      $('tally-paused').textContent = paused;
+    }
 
-                <div class="feature fade-up">
-                    <div class="feature-shot">
-                        <img src="/images/also-05-siri.png" alt="Siri answering a spending question over the Winnowed Stack screen." loading="lazy">
-                    </div>
-                    <div class="feature-text">
-                        <div class="feature-num">05</div>
-                        <div class="feature-title">Just ask.</div>
-                        <div class="feature-body">Ask Siri what you're spending this year, or what any one subscription costs you. Add a subscription or mark one reviewed without opening the app. Your stack turns up in Spotlight, and every action works as a Shortcut.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    function finish() {
+      $('done-number').textContent = money(kept);
+      $('done').hidden = false;
+      $('choices').hidden = true;
+      deck.hidden = true;
+      $('review-hint').textContent = 'Reviewed. That is the whole ritual.';
+      $('again').focus({ preventScroll: true });
+    }
 
-        <!-- Attribution -->
-        <section class="sec">
-            <p class="sec-label fade-up">Made by</p>
+    function blow(card) {
+      // Chaff: a handful of flecks carried off on the wind, from the card.
+      if (still) return;
+      var r = card.getBoundingClientRect(), f = chaff.getBoundingClientRect();
+      for (var i = 0; i < 22; i++) {
+        var s = document.createElement('span');
+        s.style.left = (r.left - f.left + Math.random() * r.width) + 'px';
+        s.style.top = (r.top - f.top + Math.random() * r.height) + 'px';
+        s.style.setProperty('--dx', (180 + Math.random() * 380) + 'px');
+        s.style.setProperty('--dy', (-140 + Math.random() * 120) + 'px');
+        s.style.setProperty('--rot', (Math.random() * 540 - 270) + 'deg');
+        s.style.animationDelay = (Math.random() * 0.25) + 's';
+        chaff.appendChild(s);
+        setTimeout(function (el) { el.remove(); }.bind(null, s), 1700);
+      }
+    }
 
-            <div class="prose fade-up">
-                <p>
+    function choose(kind) {
+      var card = deck.querySelector('.card:not(.is-leaving)');
+      if (!card || busy) return;
+      var cost = +card.dataset.cost;
+      if (kind === 'keep') kept += cost;
+      if (kind === 'cut') { cut += cost; blow(card); }
+      if (kind === 'pause') paused += 1;
+      tally();
+      card.classList.add('is-leaving', 'is-' + kind);
+      busy = !still;
+      setTimeout(function () {
+        card.remove(); busy = false;
+        if (!deck.querySelector('.card')) finish();
+      }, still ? 0 : 520);
+    }
 
-                              Winnowed is designed, built, and supported by one person, Kurt Klein, in Berwyn, Pennsylvania, under
-                    <a href="https://ksqstudios.com" style="color: var(--rust); text-decoration: none; border-bottom: 1px solid rgba(160, 61, 30, 0.25);">KSQ Studios</a>.
-                            
-                </p>
-                <p class="quiet" style="color: var(--text-muted);">
+    document.querySelectorAll('.choice').forEach(function (b) {
+      b.addEventListener('click', function () { choose(b.dataset.choice); });
+    });
 
-                              If you've used it and want to say hello, report a bug, or suggest something: 
-                    <a href="mailto:techsupport@ksqstudios.com" style="color: var(--rust); text-decoration: none; border-bottom: 1px solid rgba(160, 61, 30, 0.25);">techsupport@ksqstudios.com</a>
-                    .
-                            
-                </p>
-            </div>
-        </section>
+    deck.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') choose('keep');
+      if (e.key === 'ArrowLeft') choose('cut');
+      if (e.key === 'ArrowDown') choose('pause');
+    });
 
-        <footer class="footer fade-up">
-            <div>© 2026 KSQ Studios LLC · Winnowed</div>
-            <div class="footer-links">
-                <a href="/privacy">Privacy</a>
-                <a href="/support">Support</a>
-                <a href="mailto:techsupport@ksqstudios.com">Email</a>
-            </div>
-        </footer>
-    </main>
+    $('again').addEventListener('click', function () {
+      kept = cut = paused = 0; tally();
+      deck.innerHTML = '';
+      originals.forEach(function (c) { deck.appendChild(c.cloneNode(true)); });
+      $('done').hidden = true;
+      $('choices').hidden = false;
+      deck.hidden = false;
+      $('review-hint').textContent = 'A sample Stack, one card at a time.';
+      if (!still) { deck.classList.remove('is-dealing'); void deck.offsetWidth; deck.classList.add('is-dealing'); }
+      document.querySelector('.choice--keep').focus({ preventScroll: true });
+    });
 
-    <!-- Scroll-triggered fade-in -->
-    <script>
-    (function() {
-        var items = document.querySelectorAll('.fade-up');
-        if (!('IntersectionObserver' in window) || items.length === 0) {
-            for (var i = 0; i < items.length; i++)
-                items[i].classList.add('is-visible');
-            return;
-        }
-        var observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.15,
-            rootMargin: '0px 0px -8% 0px'
-        });
-        items.forEach(function(el) {
-            observer.observe(el);
-        });
-    })();
-    </script>
+    if (!still) deck.classList.add('is-dealing');
+  })();
+</script>
+
 </body>
 </html>

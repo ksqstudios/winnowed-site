@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy: Winnowed</title>
   <meta name="description" content="Winnowed is designed to keep your data on your device. Here's exactly what that means.">
-
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%237A9B5E%22/><path d=%22M50 28c10 0 20 8 20 22s-10 22-20 22-20-8-20-22%22 fill=%22none%22 stroke=%22%23FAF5EC%22 stroke-width=%226%22/></svg>">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Privacy: Winnowed">
   <meta property="og:description" content="Winnowed is designed to keep your data on your device. Here's exactly what that means.">
   <meta property="og:url" content="https://winnowed.app/privacy">
@@ -19,209 +14,159 @@
   <meta property="og:image" content="https://winnowed.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-
-  <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://winnowed.app/og-image.png">
-
   <link rel="canonical" href="https://winnowed.app/privacy">
-
-  <meta name="theme-color" content="#FAF5EC">
-
-  <link rel="stylesheet" href="/styles.css">
-
-  <!-- Scroll fade-in utility -->
-  <style>
-    .fade-up {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-      will-change: opacity, transform;
-    }
-    .fade-up.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .fade-up {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
-  </style>
-
+  <meta name="theme-color" content="#a8462a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="wash" aria-hidden="true"></div>
 
-  <main class="wrap">
-    <a href="/" class="brand">
-      <span class="brand-leaf">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z M2 21c0-3 1.85-5.36 5.08-6"/>
-        </svg>
-      </span>
-      <span class="brand-name">Winnowed</span>
+<header class="bar">
+  <div class="bar-inner">
+    <a class="mark" href="/">
+      <img src="/apple-touch-icon.png" alt="" width="30" height="30">
+      Winnowed
     </a>
+    <nav aria-label="Site">
+      <a href="/support">Support</a>
+      <a class="bar-cta" href="https://apps.apple.com/us/app/winnowed-subscription-tracker/id6764893370" rel="noopener">Get Winnowed</a>
+    </nav>
+  </div>
+</header>
 
-    <h1 class="hero">Privacy</h1>
+<div class="doc-band">
+  <header class="doc-head">
+    <h1>Privacy</h1>
+    <p class="updated">Effective September 2, 2026</p>
+  </header>
+</div>
 
-    <p class="hero-sub">Effective September 2, 2026</p>
-
-    <div class="prose">
-      <p class="lede">
+<main class="doc">
+<p class="lede">
         Winnowed is designed around a simple principle: your subscription data belongs to you. Here's what that means in practice.
       </p>
-    </div>
 
-    <section class="sec">
-      <h2 class="fade-up">What we collect</h2>
-      <div class="prose fade-up">
-        <p><strong>Nothing.</strong></p>
-        <p>
+
+<h2>What we collect</h2>
+
+<p><strong>Nothing.</strong></p>
+<p>
           Winnowed has no servers, no accounts, and no way to see your data. Everything you enter, including subscription names, costs, review decisions, notes, and receipts you scan, belongs to you.
         </p>
-        <p>
+<p>
           Winnowed does sync that data between your own devices, through your own iCloud account. It goes to Apple, not to us, and it stays inside the part of iCloud only you can reach. There is more detail below.
         </p>
-      </div>
-    </section>
 
-    <section class="sec">
-      <h2 class="fade-up">What we don't do</h2>
-      <div class="prose fade-up">
-        <ul>
-          <li>No accounts. No sign-in. No email address required to use the app.</li>
-          <li>No analytics. No tracking. No telemetry.</li>
-          <li>No servers of ours. Sync runs through your iCloud account, not through anything we operate.</li>
-          <li>No third-party SDKs for advertising, analytics, or tracking.</li>
-          <li>No data shared with anyone. Ever.</li>
-        </ul>
-      </div>
-    </section>
 
-    <section class="sec">
-      <h2 class="fade-up">iCloud sync</h2>
-      <div class="prose fade-up">
-        <p>
+
+<h2>What we don't do</h2>
+
+<ul>
+<li>No accounts. No sign-in. No email address required to use the app.</li>
+<li>No analytics. No tracking. No telemetry.</li>
+<li>No servers of ours. Sync runs through your iCloud account, not through anything we operate.</li>
+<li>No third-party SDKs for advertising, analytics, or tracking.</li>
+<li>No data shared with anyone. Ever.</li>
+</ul>
+
+
+
+<h2>iCloud sync</h2>
+
+<p>
           Your subscriptions, reviews, and price history sync across the devices signed in to your Apple Account. This uses your private iCloud database, the same mechanism Apple's own apps use.
         </p>
-        <p>
-          That database belongs to you. Winnowed cannot read it, and neither can anyone else. There is no Winnowed server involved at any point, and nothing is sent to us. Apple encrypts the data in transit and at rest, and it is subject to <a href="https://www.apple.com/legal/privacy/en-ww/" style="color: var(--rust); text-decoration: none; border-bottom: 1px solid rgba(160, 61, 30, 0.25);">Apple's privacy policy</a>.
+<p>
+          That database belongs to you. Winnowed cannot read it, and neither can anyone else. There is no Winnowed server involved at any point, and nothing is sent to us. Apple encrypts the data in transit and at rest, and it is subject to <a href="https://www.apple.com/legal/privacy/en-ww/">Apple's privacy policy</a>.
         </p>
-        <p>
+<p>
           If you are not signed in to iCloud, Winnowed works exactly as before and keeps everything on your device. Settings will tell you which is happening. You can stop syncing at any time by turning Winnowed off under Settings, your name, iCloud, on your device. Data already synced stays in your iCloud account until you remove it there.
         </p>
-      </div>
-    </section>
 
-    <section class="sec">
-      <h2 class="fade-up">Receipt scanning</h2>
-      <div class="prose fade-up">
-        <p>
+
+
+<h2>Receipt scanning</h2>
+
+<p>
           When you scan a statement or receipt, Winnowed reads it in one of two ways, both entirely on your device. On devices with Apple Intelligence, it uses Apple's on-device Foundation Models framework to understand what it is looking at. Everywhere else, it uses Apple's on-device Vision framework to extract text and matches patterns against it.
         </p>
-        <p>
+<p>
           The reading itself happens on your phone in either case. No image is uploaded and no text is sent anywhere to be interpreted. What you choose to keep afterward becomes a subscription like any other, and syncs the same way.
         </p>
-      </div>
-    </section>
 
-    <section class="sec">
-      <h2 class="fade-up">Forward Receipts</h2>
-      <div class="prose fade-up">
-        <p>
+
+
+<h2>Forward Receipts</h2>
+
+<p>
           Forward Receipts is an optional one-time purchase. It lets you select the text of a subscription receipt in Mail, Safari, or Notes and share it into Winnowed through the iOS share sheet.
         </p>
-        <p>
+<p>
           The shared text is read by the same on-device parser that handles camera scans. No email and no image is uploaded, and nothing is forwarded to an address. What you add from it becomes a subscription like any other.
         </p>
-      </div>
-    </section>
 
-    <section class="sec">
-      <h2 class="fade-up">Siri, Shortcuts, and Spotlight</h2>
-      <div class="prose fade-up">
-        <p>
+
+
+<h2>Siri, Shortcuts, and Spotlight</h2>
+
+<p>
           Winnowed can answer questions through Siri and can be driven by Shortcuts. These run on your device against your own data. Nothing about your subscriptions is sent to Apple or to us in order to answer them.
         </p>
-        <p>
+<p>
           Winnowed also makes your subscriptions findable in Spotlight. To do that, subscription names and costs are added to the search index that iOS maintains on your device. That index is part of iOS rather than part of Winnowed, and it stays on your phone, but it does mean this information is reachable from system search as well as from inside the app. If you would rather it were not, you can turn Winnowed off under Settings, Apps, Siri and Search on your device.
         </p>
-      </div>
-    </section>
 
-    <section class="sec">
-      <h2 class="fade-up">iCloud backup</h2>
-      <div class="prose fade-up">
-        <p>
+
+
+<h2>iCloud backup</h2>
+
+<p>
           Separately from sync, your device's standard iCloud backup may also include Winnowed's data, the same as any other app. That backup is controlled by Apple and Winnowed has no access to it either.
         </p>
-      </div>
-    </section>
 
-    <section class="sec">
-      <h2 class="fade-up">This website</h2>
-      <div class="prose fade-up">
-        <p>
+
+
+<h2>This website</h2>
+
+<p>
           winnowed.app collects nothing. No analytics, no cookies, no third-party scripts.
         </p>
-      </div>
-    </section>
 
-    <section class="sec">
-      <h2 class="fade-up">Changes</h2>
-      <div class="prose fade-up">
-        <p>
+
+
+<h2>Changes</h2>
+
+<p>
           If this policy ever changes, the new version will be posted here and the effective date above will change. No silent updates.
         </p>
-      </div>
-    </section>
 
-    <section class="sec">
-      <h2 class="fade-up">Contact</h2>
-      <div class="prose fade-up">
-        <p>
-          Questions, concerns, or anything else: <a href="mailto:techsupport@ksqstudios.com" style="color: var(--rust); text-decoration: none; border-bottom: 1px solid rgba(160, 61, 30, 0.25);">techsupport@ksqstudios.com</a>.
+
+
+<h2>Contact</h2>
+
+<p>
+          Questions, concerns, or anything else: <a href="mailto:techsupport@ksqstudios.com">techsupport@ksqstudios.com</a>.
         </p>
-        <p class="quiet" style="color: var(--text-muted);">
+<p class="quiet">
           Kurt Klein, Berwyn, Pennsylvania
         </p>
-      </div>
-    </section>
+</main>
 
-    <footer class="footer fade-up">
-      <div>© 2026 KSQ Studios LLC · Winnowed</div>
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/support">Support</a>
-        <a href="mailto:techsupport@ksqstudios.com">Email</a>
-      </div>
-    </footer>
-  </main>
+<footer class="foot">
+  <div class="foot-inner">
+    <nav aria-label="Footer">
+      <a href="/privacy">Privacy</a>
+      <a href="/support">Support</a>
+      <a href="mailto:techsupport@ksqstudios.com">techsupport@ksqstudios.com</a>
+      <a href="https://ksqstudios.com">KSQ Studios</a>
+    </nav>
+    <p>2026 KSQ Studios LLC. Winnowed is made in Berwyn, Pennsylvania.</p>
+  </div>
+</footer>
 
-  <!-- Scroll-triggered fade-in -->
-  <script>
-    (function () {
-      var items = document.querySelectorAll('.fade-up');
-      if (!('IntersectionObserver' in window) || items.length === 0) {
-        for (var i = 0; i < items.length; i++) items[i].classList.add('is-visible');
-        return;
-      }
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -8% 0px'
-      });
-      items.forEach(function (el) { observer.observe(el); });
-    })();
-  </script>
 </body>
 </html>
